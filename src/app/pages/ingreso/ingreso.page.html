@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <!-- Agrega el logo arriba del encabezado -->
+  <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
+  <ion-toolbar>
+    <ion-title class="ion-text-center title-container">Asistencia DUOC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="ion-text-center">
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="correo" type="text" placeholder="Correo" class="custom-input"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" class="custom-input"></ion-input>
+    </ion-item>
+    <ion-button expand="full" fill="clear" class="custom-link" (click)="recuperarContrasena()">
+      Recuperar Contraseña
+    </ion-button>
+    <ion-button (click)="ingresar()" expand="full" class="custom-button">
+      Ingresar
+    </ion-button>
+    <ion-button (click)="generarUsuarios()" expand="full" class="custom-button">
+      Generar Usuarios
+    </ion-button>
+  </div>
+</ion-content>

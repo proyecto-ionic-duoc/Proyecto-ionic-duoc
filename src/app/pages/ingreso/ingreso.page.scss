@@ -1,0 +1,54 @@
+
+
+.title-container {
+  margin-bottom: 20px; /* Espacio entre el título y el formulario */
+  border: 1px solid #ccc; /* Borde del contenedor del título */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espacio interno del contenedor del título */
+  max-width: 80%; /* Ancho máximo del contenedor del título */
+  margin: 0 auto; /* Centrar horizontalmente el contenedor del título */
+}
+
+
+.custom-input {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.custom-button {
+  margin-top: 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+}
+
+.custom-link {
+  color: #007BFF;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.logo {
+  width: 80%; /* Define el ancho de tu logo según tus necesidades */
+  height: 200px; /* Define la altura de tu logo según tus necesidades */
+  display: block; /* Esto ayuda a centrar la imagen horizontalmente */
+  margin: 0 auto; /* Esto también ayuda a centrar la imagen horizontalmente */
+}
+
+
+ion-content{
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+ion-item{
+  --padding-bottom: 10px;
+}
+
+
+.title {
+  margin-bottom: 20px; /* Ajusta el valor según la cantidad de espacio que desees agregar */
+}

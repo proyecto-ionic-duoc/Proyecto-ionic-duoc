@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <!-- Agrega el logo arriba del encabezado -->
+  <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
+  <ion-toolbar>
+    <ion-title class="ion-text-center title-container">Pregunta Secreta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Pregunta Secreta</ion-label>
+    <ion-input type="text" [ngModel]="preguntaSecreta" readonly></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Respuesta</ion-label>
+    <ion-input type="text" [(ngModel)]="respuesta"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
+    Regresar al login
+  </ion-button>
+
+  <!-- Mostrar el mensaje de error si errorMessage no está vacío -->
+  <ion-label color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-label>
+
+  <ion-button expand="full" (click)="validarRespuesta()">Continuar</ion-button>
+</ion-content>

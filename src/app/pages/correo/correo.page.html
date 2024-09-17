@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <!-- Agrega el logo arriba del encabezado -->
+  <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
+  <ion-toolbar>
+    <ion-title class="ion-text-center title-container">Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="correo"></ion-input>
+      </ion-item>
+
+      <!-- Mostrar el mensaje de error si errorMessage no está vacío -->
+      <ion-label class="error-message" *ngIf="errorMessage">{{ errorMessage }}</ion-label>
+      <ion-button expand="full" fill="clear" class="custom-link" (click)="volverAlInicio()">
+        Regresar al login
+      </ion-button>
+
+      <ion-button expand="full" (click)="solicitarPreguntaSecreta()">Continuar</ion-button>
+
+      <!-- Botón para volver al inicio de sesión -->
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

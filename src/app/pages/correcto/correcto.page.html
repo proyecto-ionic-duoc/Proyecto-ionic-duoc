@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <!-- Agrega el logo arriba del encabezado -->
+  <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
+  <ion-toolbar>
+    <ion-title class="ion-text-center title-container">Pregunta Secreta</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Termina el Header -->
+
+<!-- Comienza el Content -->
+<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+  <!-- <mat-slider min="1" max="100" step="1" value="10"></mat-slider> -->
+  <ion-title class="ion-padding-top">
+    <ion-label>
+      <h1 class="ion-text-center">Sistema de asistencia DUOC UC!</h1>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            Recuperar Contraseña
+          </ion-card-title>
+        </ion-card-header>
+        <div class="ion-text-center">
+        <img src="https://i.pinimg.com/550x/f5/b2/b5/f5b2b5b5939a500772e8be521ae56f73.jpg">
+      </div>
+        <ion-card-content>
+          <br>
+                ¡CORRECTO!
+          <br>
+          <br>
+          TU CONTRASEÑA ES {{ contrasena }}
+          <br>
+        </ion-card-content>
+      </ion-card>
+
+
+        <ion-label>
+          <br>
+          <div class="ion-text-center">
+            <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
+              Regresar al login
+            </ion-button>
+          </div>
+        </ion-label>
+    </ion-label>
+  </ion-title>
+
+
+
+
+<!-- Termina el Content -->
+

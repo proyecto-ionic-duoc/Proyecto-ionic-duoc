@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
-  <!-- Agrega el logo arriba del encabezado -->
+  <!-- Agrega el logo arriba del encabezado/ Agregue Hovertext en la clase -->
   <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
   <ion-toolbar>
-    <ion-title class="ion-text-center title-container">Asistencia DUOC</ion-title>
+    <ion-title class="ion-text-center title-container hover-text-animation">Asistencia  DUOC</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,10 +18,10 @@
     <ion-button expand="full" fill="clear" class="custom-link" (click)="recuperarContrasena()">
       Recuperar Contraseña
     </ion-button>
-    <ion-button (click)="ingresar()" expand="full" class="custom-button">
+    <ion-button (click)="ingresar()"  class="custom-button">
       Ingresar
     </ion-button>
-    <ion-button (click)="generarUsuarios()" expand="full" class="custom-button">
+    <ion-button (click)="generarUsuarios()"  class="custom-button">
       Generar Usuarios
     </ion-button>
   </div>

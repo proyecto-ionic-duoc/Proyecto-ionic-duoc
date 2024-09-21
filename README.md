@@ -105,3 +105,7 @@ pnpm install crypto-browserify --save
 
 
 ## Nota: El proyecto fue testeado utilizando pnpm versión 9.7.1. Asegúrate de tener la versión adecuada de pnpm si decides utilizar este gestor de paquetes.
+
+## Nota: User: atorres@duocuc.cl Pass: 1234 Pregunta: Nombre Mascota R: gato
+## Nota: User: avalenzuela@duocuc.cl Pass: qwer Pregunta: Mejor Amigo R: juanito
+## Nota: User: cfuentes@duocuc.cl Pass: asdf Pregunta: Donde Nacio Mamá R: Valparaiso

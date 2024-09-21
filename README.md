@@ -5,6 +5,8 @@
 
 ![Texto alternativo](login.png)
 
+![Texto alternativo](qr.png)
+
 ## Requisitos
 
 #### Asegúrate de tener instaladas las siguientes herramientas en tu sistema antes de proceder:

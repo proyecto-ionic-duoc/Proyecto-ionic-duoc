@@ -20,7 +20,7 @@ import { ApiClientService } from 'src/app/services/api-client.service';
 })
 export class InicioPage implements OnInit {
 
-  componente_actual = 'misdatos';
+  componente_actual = 'qr';
 
   constructor(
     private authService: AuthService, 
@@ -29,7 +29,7 @@ export class InicioPage implements OnInit {
 
   ngOnInit() {
     this.authService.primerInicioSesion.subscribe(esPrimerInicioSesion => {
-      this.componente_actual = 'misdatos';
+      this.componente_actual = 'qr';
       this.bd.datosQR.next('');
     });
   }

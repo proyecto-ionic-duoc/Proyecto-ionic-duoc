@@ -14,15 +14,18 @@ export class DataBaseService {
       toVersion: 1,
       statements: [`
         CREATE TABLE IF NOT EXISTS USUARIO (
-          correo TEXT PRIMARY KEY NOT NULL,
+          cuenta TEXT PRIMARY KEY NOT NULL,
+          correo TEXT NOT NULL,
           password TEXT NOT NULL,
+          nivelEducacional TEXT NOT NULL,
           nombre TEXT NOT NULL,
           apellido TEXT NOT NULL,
           preguntaSecreta TEXT NOT NULL,
-          respuestaSecreta TEXT NOT NULL
+          respuestaSecreta TEXT NOT NULL,
+          fechaNacimiento TEXT NOT NULL  
         );
       `]
-    }
+    },
   ]
 
   nombreBD = 'asistencia1';
@@ -39,21 +42,21 @@ export class DataBaseService {
 
   async crearUsuariosDePrueba() {
     await this.leerUsuario('atorres@duocuc.cl').then(async usuario => {
-      if (!usuario) await this.guardarUsuario(Usuario.getUsuario('atorres@duocuc.cl', '1234', 'Ana', 'Torres', 'Nombre de mi mascota', 'gato'));
+      if (!usuario) await this.guardarUsuario(Usuario.getUsuario('atorres','atorres@duocuc.cl', '1234', 'Ana', 'Torres', '¿Nombre de mi mascota?', 'gato','1','2000-00-01'));
       this.leerUsuario('avalenzuela@duocuc.cl').then(async usuario => {
-        if (!usuario) await this.guardarUsuario(Usuario.getUsuario('avalenzuela@duocuc.cl', 'qwer', 'Alberto', 'Valenzuela', 'Mi mejor amigo', 'juanito'));
+        if (!usuario) await this.guardarUsuario(Usuario.getUsuario('jperez','jperez@duocuc.cl', '5678', 'Juan', 'Perez', '¿Postre favorito?', 'panqueques','1','2000-01-01'));
         this.leerUsuario('cfuentes@duocuc.cl').then(async usuario => {
-          if (!usuario) await this.guardarUsuario(Usuario.getUsuario('cfuentes@duocuc.cl', 'asdf', 'Carla', 'Fuentes', 'Dónde nació mamá', 'valparaiso'));
+          if (!usuario) await this.guardarUsuario(Usuario.getUsuario('cmujica','cmujita@duocuc.cl', '0987', 'Carla', 'Mujica', '¿Cual es tu vehiculo favorito?', 'motos','1','2000-02-01'));
         });
       });
     });
   }
 
   async guardarUsuario(usuario: Usuario) {
-    const sql = 'INSERT OR REPLACE INTO USUARIO (correo, password, nombre, apellido, ' +
-      'preguntaSecreta, respuestaSecreta) VALUES (?,?,?,?,?,?);';
-    await this.db.run(sql, [usuario.correo, usuario.password, usuario.nombre, usuario.apellido, 
-      usuario.preguntaSecreta, usuario.respuestaSecreta]);
+    const sql = 'INSERT OR REPLACE INTO USUARIO (cuenta, correo, password, nombre, apellido, ' +
+      'preguntaSecreta, respuestaSecreta, nivelEducacional, fechaNacimiento) VALUES (?,?,?,?,?,?,?,?,?);';
+    await this.db.run(sql, [usuario.cuenta, usuario.correo, usuario.password, usuario.nombre, usuario.apellido, 
+      usuario.preguntaSecreta, usuario.respuestaSecreta, usuario.nivelEducacional,usuario.fechaNacimiento]);
     await this.leerUsuarios();
   }
 

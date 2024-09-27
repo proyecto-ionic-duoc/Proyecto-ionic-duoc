@@ -1,27 +1,28 @@
 export class Usuario {
-
+  cuenta = '';
   correo = '';
   password = '';
   nombre = '';
   apellido = '';
   preguntaSecreta = '';
   respuestaSecreta = '';
+  nivelEducacional = '';
+  fechaNacimiento = '';
 
-  constructor() { }
-
-  setUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string) {
+  constructor(cuenta: string, correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, nivelEducacional: string, fechaNacimiento: string) {
+    this.cuenta = cuenta;
     this.correo = correo;
     this.password = password;
     this.nombre = nombre;
     this.apellido = apellido;
     this.preguntaSecreta = preguntaSecreta;
     this.respuestaSecreta = respuestaSecreta;
+    this.nivelEducacional = nivelEducacional;
+    this.fechaNacimiento = fechaNacimiento;
   }
 
-  static getUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string) {
-    const usu = new Usuario();
-    usu.setUsuario(correo, password, nombre, apellido, preguntaSecreta, respuestaSecreta)
-    return usu;
+  static getUsuario(cuenta: string, correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, nivelEducacional: string, fechaNacimiento: string) {
+    return new Usuario(cuenta, correo, password, nombre, apellido, preguntaSecreta, respuestaSecreta, nivelEducacional, fechaNacimiento);
   }
 
   validarCampoRequerido(nombreCampo: string, valor: string) {
@@ -53,16 +54,12 @@ export class Usuario {
     return this.validarCampoRequerido('respuesta secreta', respuestaSecreta);
   }
 
-  validarPropiedadesUsuario(correo: string, password: string, nombre: string, apellido: string
-    , preguntaSecreta: string, respuestaSecreta: string): string {
+  validarPropiedadesUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string): string {
     return this.validarCorreo(correo) 
       || this.validarPassword(password)
       || this.validarNombre(nombre)
       || this.validarApellido(apellido)
       || this.validarPreguntaSecreta(preguntaSecreta)
-      || this.validarRespuestaSecreta(respuestaSecreta)
+      || this.validarRespuestaSecreta(respuestaSecreta);
   }
-
 }
-
-

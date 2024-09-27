@@ -9,7 +9,17 @@ export class Usuario {
   nivelEducacional = '';
   fechaNacimiento = '';
 
-  constructor(cuenta: string, correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, nivelEducacional: string, fechaNacimiento: string) {
+  constructor(
+    cuenta: string = '',
+    correo: string = '',
+    password: string = '',
+    nombre: string = '',
+    apellido: string = '',
+    preguntaSecreta: string = '',
+    respuestaSecreta: string = '',
+    nivelEducacional: string = '',
+    fechaNacimiento: string = ''
+  ) {
     this.cuenta = cuenta;
     this.correo = correo;
     this.password = password;
@@ -20,6 +30,7 @@ export class Usuario {
     this.nivelEducacional = nivelEducacional;
     this.fechaNacimiento = fechaNacimiento;
   }
+  
 
   static getUsuario(cuenta: string, correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, nivelEducacional: string, fechaNacimiento: string) {
     return new Usuario(cuenta, correo, password, nombre, apellido, preguntaSecreta, respuestaSecreta, nivelEducacional, fechaNacimiento);

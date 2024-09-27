@@ -37,6 +37,7 @@ export class MisdatosComponent  implements OnInit {
   }
 
   async actualizarPerfil() {
+    if (!this.validarCampo('cuenta', this.usuario.cuenta)) return;
     if (!this.validarCampo('nombre', this.usuario.nombre)) return;
     if (!this.validarCampo('apellidos', this.usuario.apellido)) return;
     if (!this.validarCampo('correo', this.usuario.correo)) return;

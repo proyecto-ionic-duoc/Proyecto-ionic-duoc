@@ -44,6 +44,7 @@ export class ForoComponent  implements OnInit {
     this.publicacion.titulo = titulo;
     this.publicacion.contenido = contenido;
   }
+  
 
   limpiarPublicacion() {
     this.setPublicacion('', '', '', '', '', '');

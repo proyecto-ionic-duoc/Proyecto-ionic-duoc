@@ -1,10 +1,16 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header-container">
   <ion-toolbar>
-    <ion-title>Asistencia DUOC</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="cerrarSesion()">Cerrar Sesión</ion-button>
-    </ion-buttons>
+    <div class="logo-container">
+      <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
+    </div>
   </ion-toolbar>
+
+  <ion-toolbar>
+    <div class="title-container">
+      <ion-title class="ion-text-center hover-text-animation">Asistencia DUOC</ion-title>
+    </div>
+  </ion-toolbar>
+
   <ion-toolbar>
     <ion-segment [(ngModel)]="componente_actual"  (ngModelChange)="cambiarComponente($event)">
       
@@ -38,5 +44,9 @@
 
   <app-misdatos [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
   
-</ion-content>
 
+  <!-- Cerrar Sesión en la parte inferior -->
+  <div class="ion-text-center">
+    <ion-button (click)="cerrarSesion()">Cerrar Sesión</ion-button>
+  </div>
+</ion-content>

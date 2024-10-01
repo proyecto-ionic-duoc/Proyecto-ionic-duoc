@@ -75,9 +75,9 @@ export class DataBaseService {
     await this.leerUsuarios();
   }
 
-  async validarUsuario(correo: string, password: string): Promise<Usuario | undefined> {
-    const usuarios: Usuario[] = (await this.db.query('SELECT * FROM USUARIO WHERE correo=? AND password=?;',
-      [correo, password])).values as Usuario[];
+  async validarUsuario(cuenta: string, password: string): Promise<Usuario | undefined> {
+    const usuarios: Usuario[] = (await this.db.query('SELECT * FROM USUARIO WHERE cuenta=? AND password=?;',
+      [cuenta, password])).values as Usuario[];
     return usuarios[0];
   }
 

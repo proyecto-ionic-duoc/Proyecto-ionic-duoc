@@ -16,7 +16,7 @@ import { DataBaseService } from 'src/app/services/data-base.service';
 })
 export class IngresoPage {
 
-  correo = '';
+  cuenta = '';
   password = '';
 
 
@@ -30,7 +30,7 @@ export class IngresoPage {
       this.router.navigate(['inicio']);
     } else {
       // El usuario no está autenticado, intenta realizar el inicio de sesión.
-      this.authService.login(this.correo, this.password);
+      this.authService.login(this.cuenta, this.password);
     }
   }
   recuperarContrasena() {

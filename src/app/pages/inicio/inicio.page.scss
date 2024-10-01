@@ -1,0 +1,59 @@
+.header-container {
+          position: relative; /* Para manejar la posición del logo */
+          overflow: hidden; /* Para ocultar partes del logo que se salgan del contenedor */
+          height: 300px; /* Aumenta la altura total para acomodar todos los elementos */
+          
+          ion-toolbar {
+            display: flex; /* Para alinear el logo y el título */
+            justify-content: center; /* Centra el logo horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 33%; /* Ajusta la altura a 33% para dar espacio a todos los elementos */
+            padding: 0; /* Elimina el padding por defecto */
+          }
+        
+          .logo-container {
+            position: relative; /* Permite que el logo se desplace fuera de la pantalla */
+            top: 50%; /* Centra verticalmente */
+            transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+            width: 100%; /* Usa todo el ancho de la pantalla */
+            animation: slideLogo 10s linear infinite; /* Animación de desplazamiento del logo */
+          }
+        
+          .logo {
+            width: 350px; /* Ajusta el tamaño del logo según tus necesidades */
+            height: auto; /* Mantiene la proporción original del logo */
+          }
+        
+          .title-container {
+            text-align: center; /* Centra el texto horizontalmente */
+            position: relative; /* Para mantener el título en su lugar */
+            margin-top: 10px; /* Agrega un margen superior para evitar superposición */
+            z-index: 1; /* Asegura que el título esté encima del logo */
+          }
+        
+          @keyframes slideLogo {
+                    0% {
+                      transform: translateX(-100%); /* Comienza fuera de la pantalla a la izquierda */
+                      opacity: 1; /* El logo es completamente visible */
+                    }
+                    40% {
+                      transform: translateX(0); /* Llega al centro de la pantalla */
+                      opacity: 1; /* El logo es completamente visible */
+                    }
+                    97% {
+                      transform: translateX(110%); /* Se mueve completamente fuera de la pantalla a la derecha */
+                      opacity: 1; /* El logo sigue siendo visible hasta aquí */
+                    }
+                    98% {
+                              transform: translateX(110%); /* Se mueve completamente fuera de la pantalla a la derecha */
+                              opacity: 0 /* El logo sigue siendo visible hasta aquí */
+                            }
+
+                    100% {
+                      transform: translateX(-100%); /* Vuelve a la posición inicial fuera de la pantalla a la izquierda */
+                      opacity: 0 /* Se asegura que el logo esté visible al reiniciar */
+                    }
+                  }
+                  
+                  
+          }                  

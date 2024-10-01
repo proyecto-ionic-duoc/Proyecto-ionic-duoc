@@ -47,6 +47,10 @@ export class QrComponent  implements OnInit {
     this.authService.usuarioAutenticado.subscribe((usuario) => {
       this.usuario = usuario? usuario : new Usuario();
     });
+
+      
+  // Iniciar el escaneo automáticamente al cargar el componente
+    this.comenzarEscaneoQR();
   }
 
   async comenzarEscaneoQR() {

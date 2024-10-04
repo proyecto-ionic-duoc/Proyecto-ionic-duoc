@@ -11,12 +11,13 @@
 
 
   <ion-content class="ion-padding">
-    <div class="ion-text-center" >
-      <ion-item lines="none">
-        <ion-input [(ngModel)]="cuenta" type="text" placeholder="Nombre de usuario" class="custom-input"></ion-input>
+    <ion-card class="ion-text-center" >
+      <ion-card>
+      <ion-item class="custom-input">
+        <ion-input [(ngModel)]="cuenta" type="text" placeholder="Nombre de usuario" ></ion-input>
       </ion-item>
-      <ion-item lines="none">
-        <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" class="custom-input"></ion-input>
+      <ion-item class="custom-input">
+        <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" ></ion-input>
       </ion-item>
       <ion-button expand="full" fill="clear" class="custom-link" (click)="recuperarContrasena()">
         Recuperar Contraseña
@@ -27,6 +28,7 @@
       <ion-button (click)="generarUsuarios()"  class="custom-button">
         Generar Usuarios
       </ion-button>
-    </div>
+    </ion-card>
+    </ion-card>
   </ion-content>
 </ion-content>

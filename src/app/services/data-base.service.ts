@@ -42,7 +42,7 @@ export class DataBaseService {
 
   async crearUsuariosDePrueba() {
     await this.leerUsuario('atorres@duocuc.cl').then(async usuario => {
-      if (!usuario) await this.guardarUsuario(Usuario.getUsuario('atorres','atorres@duocuc.cl', '1234', 'Ana', 'Torres', '¿Nombre de mi mascota?', 'gato','1','2000-00-01'));
+      if (!usuario) await this.guardarUsuario(Usuario.getUsuario('atorres','atorres@duocuc.cl', '1234', 'Ana', 'Torres', '¿Nombre de mi mascota?', 'gato','1','2000-01-01'));
       this.leerUsuario('avalenzuela@duocuc.cl').then(async usuario => {
         if (!usuario) await this.guardarUsuario(Usuario.getUsuario('jperez','jperez@duocuc.cl', '5678', 'Juan', 'Perez', '¿Postre favorito?', 'panqueques','1','2000-01-01'));
         this.leerUsuario('cfuentes@duocuc.cl').then(async usuario => {

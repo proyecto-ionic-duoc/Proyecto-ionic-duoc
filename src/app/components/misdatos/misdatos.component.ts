@@ -18,15 +18,34 @@ export class MisdatosComponent  implements OnInit {
 
   usuario = new Usuario();
   repeticionPassword = '';
+  fechaVisualizar = '';
 
   constructor(private authService: AuthService, private bd: DataBaseService) { }
 
   ngOnInit() {
     this.authService.usuarioAutenticado.subscribe((usuario) => {
-      this.usuario = usuario? usuario : new Usuario();
-      this.repeticionPassword = usuario? usuario.password : '';
+      if (usuario) {
+        this.usuario = usuario;
+        this.repeticionPassword = usuario.password;
+  
+        // Cargar la fecha de nacimiento en el formato adecuado para el input
+        if (usuario.fechaNacimiento) {
+          this.fechaVisualizar = usuario.fechaNacimiento; // Asegúrate de que esté en YYYY-MM-DD
+          console.log('Fecha cargada:', this.fechaVisualizar); // Verifica el formato
+        }
+      } else {
+        this.usuario = new Usuario();
+        this.repeticionPassword = '';
+      }
     });
   }
+  
+
+  
+  onDateChange(newDate: string) {
+    this.usuario.fechaNacimiento = (newDate); // Guarda en formato YYYY-MM-DD
+  }
+
 
   validarCampo(nombreCampo:string, valor: string) {
     if (valor.trim() === '') {

@@ -1,34 +1,51 @@
-<ion-content padding class="background">
 
-
-  <ion-header [translucent]="true" class>
+<ion-content [fullscreen]="true">
+  <div class="InicioSesion">
     <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
-    <ion-toolbar>
-      <ion-title class="ion-text-center title-container hover-text-animation">Asistencia  DUOC</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list class="ListaInicioSesion">
 
+        <ion-select label="Idioma" position="floating" class="Idioma">
+          <ion-select-option value="Es">Español</ion-select-option>
+          <ion-select-option value="En">English</ion-select-option>
+          <ion-select-option value="Japones">日本人</ion-select-option>
+        </ion-select>
 
-
-  <ion-content class="ion-padding">
-    <ion-card class="ion-text-center" >
-      <ion-card>
-      <ion-item class="custom-input">
+      <span class="LoginItemTitulo">
+        Bienvenido Al Sistema de Asistencia de DuocUC
+      </span>
+      <br><br>
+      <ion-item class="LoginItem">
         <ion-input [(ngModel)]="cuenta" type="text" placeholder="Nombre de usuario" ></ion-input>
       </ion-item>
-      <ion-item class="custom-input">
+      <ion-item class="LoginItem">
         <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" ></ion-input>
       </ion-item>
-      <ion-button expand="full" fill="clear" class="custom-link" (click)="recuperarContrasena()">
-        Recuperar Contraseña
+      <br>
+      <ion-button (click)="ingresar()" fill="solid">
+        Iniciar Sesión
+        <ion-icon slot="end" name="person-circle"></ion-icon>
       </ion-button>
-      <ion-button (click)="ingresar()"  class="custom-button">
-        Ingresar
+      <ion-button (click)="rutaduoc()" fill="none">
+        Ruta DuocUC
       </ion-button>
-      <ion-button (click)="generarUsuarios()"  class="custom-button">
-        Generar Usuarios
-      </ion-button>
-    </ion-card>
-    </ion-card>
-  </ion-content>
+      <br>
+      <ion-card-content>
+        <ion-button (click)="recuperarContrasena()" fill="none">
+          Recuperar Contraseña
+        </ion-button>
+      </ion-card-content>
+
+    </ion-list>
+  </div>
 </ion-content>
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="font-size: small;">
+      © 2024 DuocUC
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

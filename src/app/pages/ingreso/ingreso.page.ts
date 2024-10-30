@@ -40,6 +40,13 @@ export class IngresoPage {
     this.dataBaseService.crearUsuariosDePrueba();
 
   }
+
+  rutaduoc() {
+    this.router.navigate(['mapa']);
+  }
+
+
+
 }
 
 

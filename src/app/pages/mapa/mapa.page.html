@@ -1,0 +1,29 @@
+<div id="mapId" style="height: 100%;"></div>
+<ion-footer>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="goToDUOC()" >
+      DUOC
+    </ion-button>
+
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="goToMyPosition()">
+      Aquí
+    </ion-button>
+
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="showRouteToDuoc()">
+      Ruta
+    </ion-button>
+
+    <ion-button shape="round" color="secondary" size="small"
+        (click)="volverAlInicio()">
+      Volver
+    </ion-button>
+
+    <div *ngIf="distance">
+      <br>
+      {{ distance }}
+    </div>
+  </ion-toolbar>
+</ion-footer>

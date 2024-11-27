@@ -1,37 +1,62 @@
 
+
 <ion-content [fullscreen]="true">
   <div class="InicioSesion">
     <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
     <ion-list class="ListaInicioSesion">
 
-        <ion-select label="Idioma" position="floating" class="Idioma">
-          <ion-select-option value="Es">Español</ion-select-option>
-          <ion-select-option value="En">English</ion-select-option>
-          <ion-select-option value="Japones">日本人</ion-select-option>
-        </ion-select>
+      <ion-select 
+        [(ngModel)]="selectedLanguage"
+        (ionChange)="CambiarIdioma($event)"
+        label="{{ 'LANGUAGE.LABEL' | translate }}" 
+        position="floating" 
+        class="Idioma">
+        <ion-select-option value="es">{{ 'LANGUAGE.SPANISH' | translate }}</ion-select-option>
+        <ion-select-option value="en">{{ 'LANGUAGE.ENGLISH' | translate }}</ion-select-option>
+        <ion-select-option value="ja">{{ 'LANGUAGE.JAPANESE' | translate }}</ion-select-option>
+      </ion-select>
+
+      <ion-button shape="round" size="small" (click)="navigateTheme()">
+        {{ 'LOGIN.TEMA' | translate }}
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-button>
 
       <span class="LoginItemTitulo">
-        Bienvenido Al Sistema de Asistencia de DuocUC
+        {{ 'LOGIN.WELCOME' | translate }}
       </span>
       <br><br>
       <ion-item class="LoginItem">
-        <ion-input [(ngModel)]="cuenta" type="text" placeholder="Nombre de usuario" ></ion-input>
+        <ion-input 
+          [(ngModel)]="cuenta" 
+          type="text" 
+          [placeholder]="'LOGIN.USERNAME_PLACEHOLDER' | translate">
+        </ion-input>
       </ion-item>
       <ion-item class="LoginItem">
-        <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña" ></ion-input>
+        <ion-input 
+          [(ngModel)]="password" 
+          type="password" 
+          [placeholder]="'LOGIN.PASSWORD_PLACEHOLDER' | translate">
+        </ion-input>
       </ion-item>
       <br>
       <ion-button (click)="ingresar()" fill="solid">
-        Iniciar Sesión
+        {{ 'LOGIN.SIGN_IN' | translate }}
         <ion-icon slot="end" name="person-circle"></ion-icon>
       </ion-button>
+
+      <ion-button (click)="generarUsuarios()" fill="solid">
+        GENERAR
+        <ion-icon slot="end" name="person-circle"></ion-icon>
+      </ion-button>
+
       <ion-button (click)="rutaduoc()" fill="none">
-        Ruta DuocUC
+        {{ 'LOGIN.DUOC_ROUTE' | translate }}
       </ion-button>
       <br>
       <ion-card-content>
         <ion-button (click)="recuperarContrasena()" fill="none">
-          Recuperar Contraseña
+          {{ 'LOGIN.RECOVER_PASSWORD' | translate }}
         </ion-button>
       </ion-card-content>
 
@@ -39,13 +64,10 @@
   </div>
 </ion-content>
 
-
-
-
 <ion-footer>
   <ion-toolbar>
     <ion-title style="font-size: small;">
-      © 2024 DuocUC
+      {{ 'LOGIN.FOOTER' | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-footer>

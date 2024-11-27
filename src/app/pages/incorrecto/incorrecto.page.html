@@ -2,23 +2,16 @@
   <!-- Agrega el logo arriba del encabezado -->
   <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
   <ion-toolbar>
-    <ion-title class="ion-text-center title-container">Pregunta Secreta</ion-title>
+    <ion-title class="ion-text-center title-container">{{ 'HEADER.TITLE_INCORRECT' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 <!-- Termina el Header -->
 
 <!-- Comienza el Content -->
 <ion-content [fullscreen]="true" class="ion-padding-horizontal">
-  <!-- <mat-slider min="1" max="100" step="1" value="10"></mat-slider> -->
   <ion-title class="ion-padding-top">
     <ion-label>
-      <h1 class="ion-text-center">Sistema de asistencia DUOC UC!</h1>
-      <!-- {{interpolacion}} 
-          Permite mostrar los datos desde el script a la visual
-          verificar el data en el home.page.ts
-        -->
-
-
+      <h1 class="ion-text-center">{{ 'CONTENT.SISTEMA_ASISTENCIA' | translate }}</h1>
 
       <ion-card>
         <ion-card-header>
@@ -27,32 +20,28 @@
           <br>
           <br>
           <div class="ion-text-center">
-          !LO SENTIMOS PERO LOS DATOS INGRESADOS NO SON CORRECTOS!
+            {{ 'CONTENT.ERROR_DATOS' | translate }}
           </div>
         </ion-card-header>
         <ion-card-content>
           <br>
           <div class="ion-text-center">
-          <img src="assets/EstudiantesGrupoLogo.png">
+            <img src="assets/EstudiantesGrupoLogo.png">
           </div>
-          
           <br>
         </ion-card-content>
       </ion-card>
 
+      <br>
+      <ion-label>
         <br>
-        <ion-label>
-          <br>
-          <div class="ion-text-center">
-            <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
-              Regresar al login
-            </ion-button>
-          </div>
-        </ion-label>
+        <div class="ion-text-center">
+          <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
+            {{ 'CONTENT.REGRESAR_LOGIN' | translate }}
+          </ion-button>
+        </div>
+      </ion-label>
     </ion-label>
   </ion-title>
-
-
-
-
+</ion-content>
 <!-- Termina el Content -->

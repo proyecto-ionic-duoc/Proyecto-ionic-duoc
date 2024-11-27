@@ -6,13 +6,14 @@ import { Usuario } from 'src/app/model/usuario';
 import { AuthService } from 'src/app/services/auth.service';
 import { DataBaseService } from 'src/app/services/data-base.service';
 import { showAlertDUOC, showToast } from 'src/app/tools/message-routines';
+import { TranslateModule,TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-misdatos',
   templateUrl: './misdatos.component.html',
   styleUrls: ['./misdatos.component.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [IonicModule, CommonModule, FormsModule, TranslateModule],
 })
 export class MisdatosComponent  implements OnInit {
 
@@ -20,7 +21,14 @@ export class MisdatosComponent  implements OnInit {
   repeticionPassword = '';
   fechaVisualizar = '';
 
-  constructor(private authService: AuthService, private bd: DataBaseService) { }
+  constructor(private authService: AuthService, 
+              private bd: DataBaseService,
+              private translateService: TranslateService
+
+  ) {    
+    const lang = localStorage.getItem('lang') || 'es'
+    this.translateService.setDefaultLang('lang');
+    this.translateService.use(lang); }
 
   ngOnInit() {
     this.authService.usuarioAutenticado.subscribe((usuario) => {

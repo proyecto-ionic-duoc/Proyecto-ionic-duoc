@@ -1,0 +1,115 @@
+{
+    "LANGUAGE": {
+      "LABEL": "言語",
+      "SPANISH": "スペイン語",
+      "ENGLISH": "英語",
+      "JAPANESE": "日本語"
+    },
+    "LOGIN": {
+      "WELCOME": "DuocUC出席システムへようこそ",
+      "USERNAME_PLACEHOLDER": "ユーザー名",
+      "PASSWORD_PLACEHOLDER": "パスワード",
+      "SIGN_IN": "サインイン",
+      "DUOC_ROUTE": "DuocUCルート",
+      "RECOVER_PASSWORD": "パスワードを回復",
+      "FOOTER": "© 2024 DuocUC",
+      "TEMA": "テーマ"
+
+  },
+  
+  "HEADER": {
+      "TITLE": "DuoC出席へようこそ",
+      "SEGMENT_QR": "QRリーダー",
+      "SEGMENT_MICLASE": "マイクラス",
+      "SEGMENT_MISDATOS": "マイデータ",
+      "SEGMENT_FORO": "フォーラム",
+      "SEGMENT_EXIT": "終了",
+      "TITLE_INCORRECT": "不正解!!",
+      "TITLE_CORREO": "パスワードを回復"
+  },
+  "BUTTONS": {
+      "LOGOUT": "ログアウト"
+  },
+  "CONTENT": {
+      "CORREO_ELECTRONICO": "Eメール",
+      "REGRESAR_LOGIN": "ログインに戻る",
+      "CONTINUAR": "続ける",
+      "ERROR_MESSAGE": "エラーが発生しました。再試行してください。",
+      "SISTEMA_ASISTENCIA": "DUOC UC出席システム！",
+      "ERROR_DATOS": "申し訳ありませんが、入力されたデータは正しくありません！"
+  },
+  "PREGUNTA_SECRETA": {
+      "TITLE": "秘密の質問。",
+      "LABEL_PREGUNTA": "秘密の質問。",
+      "LABEL_RESPUESTA": "答え。",
+      "BUTTON_REGRESAR": "ログインに戻る。",
+      "BUTTON_CONTINUAR": "続ける",
+      "ERROR": "答えにエラーがあります"
+  },
+  "RECUPERAR_CONTRASENA": {
+      "TITLE": "パスワードを回復",
+      "HEADER": "DUOC UC出席システム！",
+      "CORRECTO": "正解！",
+      "TU_CONTRASENA": "あなたのパスワードは",
+      "BUTTON_REGRESAR": "ログインに戻る"
+  },
+  "MAPA": {
+      "BUTTON_DUOC": "DUOC",
+      "BUTTON_AQUI": "ここ",
+      "BUTTON_RUTA": "ルート",
+      "VOLVER": "戻る",
+      "DISTANCE": "距離: "
+  },
+    "ASISTENCIA": {
+      "BLOQUE_INICIO": "開始ブロック",
+      "BLOQUE_TERMINO": "終了ブロック",
+      "DIA": "日",
+      "HORA_INICIO": "開始時間",
+      "HORA_TERMINO": "終了時間",
+      "SIGLA_ASIGNATURA": "科目の略称",
+      "NOMBRE_PROFESOR": "教授の名前",
+      "SECCION": "セクション",
+      "SEDE": "キャンパス"
+    },
+    "USER": {
+      "CUENTA": "アカウント",
+      "CORREO": "メール",
+      "NOMBRE": "名前",
+      "APELLIDO": "姓",
+      "PREGUNTA_SECRETA": "秘密の質問",
+      "RESPUESTA_SECRETA": "秘密の答え",
+      "NIVEL_EDUCACIONAL": "教育レベル",
+      "FECHA_NACIMIENTO": "誕生日",
+      "CONTRASENA": "パスワード",
+      "REPETIR_CONTRASENA": "パスワードを再入力",
+      "ACTUALIZAR_DATOS": "データを更新"
+    },
+    "QR": {
+      "WELCOME": "ようこそ",
+      "START_SCAN": "QRスキャンを開始",
+      "STOP_SCAN": "QRスキャンを停止",
+      "SCANNING": "スキャン中...",
+      "SCANNING_INSTRUCTION": "カメラをQRコードに向けてください。"
+    },
+    "THEME": {
+  "ColorTheme": "カラーテーマ",
+  "ColorTheme_Light": "ライト",
+  "ColorTheme_Dark": "ダーク",
+  "ColorTheme_Green": "グリーン",
+  "ColorTheme_Red": "レッド",
+  "ColorTheme_Facebook": "フェイスブック",
+  "ColorTheme_Instagram": "インスタグラム",
+  "ColorTheme_Duoc": "ドゥオック",
+  "TITULO": "テーマ"
+
+},
+"FORO": {
+  "TITLE": "フォーラム",
+  "LABEL": "タイトル",
+  "LABEL2": "説明",
+  "BUTTOM_LIMPIAR": "クリア",
+  "BUTTOM_GUARDAR": "保存",
+  "P_RECIENTES": "最近の投稿"
+}
+
+  }

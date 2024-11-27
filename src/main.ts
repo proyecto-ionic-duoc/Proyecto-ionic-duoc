@@ -17,10 +17,13 @@ import { InitializeAppService } from './app/services/initialize-app.service';
 import { AuthService } from './app/services/auth.service';
 import { Storage } from '@ionic/storage-angular';
 import { ApiClientService } from './app/services/api-client.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { provideIonicAngular } from '@ionic/angular/standalone';
 // CGV-FIN-1
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// import agregados 
 if (environment.production) {
   enableProdMode();
 }
@@ -52,6 +55,10 @@ export function initializeFactory(init: InitializeAppService) {
 }
 // CGV-FIN-2 
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
@@ -61,6 +68,18 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     importProvidersFrom(IonicModule.forRoot({ innerHTMLTemplatesEnabled: true })),
     importProvidersFrom(HttpClientModule),
+    // Nuevo provider para las traducciones
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        defaultLanguage: 'es',
+        loader: {
+          provide: TranslateLoader,
+          useFactory: createTranslateLoader,
+          deps: [HttpClient]
+        }
+      })
+    ),
+
     InitializeAppService,
     SqliteService,
     DataBaseService,

@@ -13,13 +13,14 @@ import { log, showAlertDUOC, showAlertYesNoDUOC } from 'src/app/tools/message-ro
 import jsQR, { QRCode } from 'jsqr';
 import { BarcodeFormat, BarcodeScanner, ScanResult } from '@capacitor-mlkit/barcode-scanning';
 import { MessageEnum } from 'src/app/tools/message-enum';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-qr',
   templateUrl: './qr.component.html',
   styleUrls: ['./qr.component.scss'],
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [IonicModule, CommonModule, FormsModule, TranslateModule],
   standalone: true
 })
 export class QrComponent  implements OnInit {
@@ -39,8 +40,12 @@ export class QrComponent  implements OnInit {
     private authService: AuthService,
     private bd: DataBaseService,
     private sqliteService: SqliteService,
-    private readonly ngZone: NgZone
-  ) { }
+    private readonly ngZone: NgZone,
+    private translateService: TranslateService
+  ) {    
+    const lang = localStorage.getItem('lang') || 'es'
+    this.translateService.setDefaultLang('lang');
+    this.translateService.use(lang); }
 
   ngOnInit() {
     this.plataforma = this.sqliteService.platform;

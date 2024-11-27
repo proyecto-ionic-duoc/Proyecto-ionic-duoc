@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
+import { TranslateModule } from '@ngx-translate/core'; // Importa TranslateModule
 import { MiclaseComponent } from './miclase.component';
 
 describe('MiclaseComponent', () => {
@@ -9,8 +9,11 @@ describe('MiclaseComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MiclaseComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        MiclaseComponent, // Componente standalone importado aquí
+        IonicModule.forRoot(), // Módulo de Ionic para soporte
+        TranslateModule.forRoot(), // Agregar TranslateModule para TranslateService y TranslateStore
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(MiclaseComponent);

@@ -6,6 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { Router } from '@angular/router';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { LanguageComponent } from 'src/app/components/language/language.component';
 
 @Component({
   selector: 'app-pregunta',
@@ -16,7 +18,7 @@ import { Router } from '@angular/router';
     IonicModule,
     FormsModule,
     CommonModule,
-    // ...
+    TranslateModule
   ],
 })
 export class PreguntaPage {
@@ -26,7 +28,15 @@ export class PreguntaPage {
   errorMessage: string = '';
   pass: string = '';
 
-  constructor(private navCtrl: NavController, private route: ActivatedRoute, private dataBaseService: DataBaseService,private router: Router) {
+  constructor(private navCtrl: NavController, 
+              private route: ActivatedRoute, 
+              private dataBaseService: DataBaseService,
+              private router: Router,
+              private translateService: TranslateService) {
+                const lang = localStorage.getItem('lang') || 'es'
+                this.translateService.setDefaultLang('es');
+                this.translateService.use(lang);
+              
     const correoParam = this.route.snapshot.queryParamMap.get('correo');
     if (correoParam !== null) {
       this.correo = correoParam;

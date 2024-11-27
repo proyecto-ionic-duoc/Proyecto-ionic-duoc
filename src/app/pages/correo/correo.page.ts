@@ -4,6 +4,9 @@ import { DataBaseService  } from 'src/app/services/data-base.service';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { LanguageComponent } from 'src/app/components/language/language.component';
+
 
 @Component({
   selector: 'app-correo',
@@ -13,15 +16,23 @@ import { CommonModule } from '@angular/common';
   imports: [
     IonicModule,
     FormsModule,
-    CommonModule, 
-    // ...
+    CommonModule,
+    TranslateModule 
   ],
 })
 export class CorreoPage {
+  selectedLanguage: string = 'es';
   correo: string = '';
   errorMessage: string = ''; // Variable para almacenar el mensaje de error
 
-  constructor(private navCtrl: NavController, private dataBaseService: DataBaseService) {}
+  constructor(private navCtrl: NavController, 
+              private dataBaseService: DataBaseService,
+              private translateService: TranslateService
+            ) {
+              const lang = localStorage.getItem('lang') || 'es'
+              this.translateService.setDefaultLang('es');
+              this.translateService.use(lang);
+            }
 
   async solicitarPreguntaSecreta() {
     // Validar el correo y comprobar si existe en la base de datos
@@ -34,7 +45,7 @@ export class CorreoPage {
       });
     } else {
       // Mostrar un mensaje de error
-      this.errorMessage = 'Correo no encontrado';
+      this.navCtrl.navigateBack('/incorrecto');
     }
     
   }

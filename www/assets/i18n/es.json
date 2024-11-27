@@ -1,0 +1,114 @@
+{
+    "LANGUAGE": {
+      "LABEL": "Idioma",
+      "SPANISH": "Español",
+      "ENGLISH": "English",
+      "JAPANESE": "日本語"
+    },
+    "LOGIN": {
+      "WELCOME": "Bienvenido al Sistema de Asistencia de DuocUC",
+      "USERNAME_PLACEHOLDER": "Nombre de usuario",
+      "PASSWORD_PLACEHOLDER": "Contraseña",
+      "SIGN_IN": "Iniciar Sesión",
+      "DUOC_ROUTE": "Ruta DuocUC",
+      "RECOVER_PASSWORD": "Recuperar Contraseña",
+      "FOOTER": "© 2024 DuocUC",
+      "TEMA":"Temas"
+    },
+    "HEADER":{
+        "TITLE": "Bienvenido a asistencia DuoC",
+        "SEGMENT_QR":"QR",
+        "SEGMENT_MICLASE":"Clase",
+        "SEGMENT_MISDATOS":"Datos",
+        "SEGMENT_FORO": "Foro",
+        "SEGMENT_EXIT": "Salir",
+        "TITLE_INCORRECT": "Incorrecto",
+        "TITLE_CORREO": "Recuperar Contraseña"
+    },
+    "BUTTONS":{
+        "LOGOUT":"salir"
+    },
+    "CONTENT": {
+        "SISTEMA_ASISTENCIA":"Sistema de asistencia DUOC UC!",
+        "ERROR_DATOS":"!LO SENTIMOS PERO LOS DATOS INGRESADOS NO SON CORRECTOS!",
+        "CORREO_ELECTRONICO": "Correo Electrónico",
+        "REGRESAR_LOGIN": "Regresar al login",
+        "CONTINUAR": "Continuar",
+        "ERROR_MESSAGE": "Ocurrió un error. Por favor, inténtalo de nuevo."
+        
+    },
+    "PREGUNTA_SECRETA": {
+    "TITLE": "Pregunta Secreta",
+    "LABEL_PREGUNTA": "Pregunta Secreta",
+    "LABEL_RESPUESTA": "Respuesta",
+    "BUTTON_REGRESAR": "Regresar al login",
+    "BUTTON_CONTINUAR": "Continuar",
+    "ERROR": "Error en la respuesta"
+  },
+  "RECUPERAR_CONTRASENA": {
+    "TITLE": "Recuperar Contraseña",
+    "HEADER": "Sistema de asistencia DUOC UC!",
+    "CORRECTO": "¡CORRECTO!",
+    "TU_CONTRASENA": "TU CONTRASEÑA ES",
+    "BUTTON_REGRESAR": "Regresar al login"
+  },
+  "MAPA": {
+    "BUTTON_DUOC": "DUOC",
+    "BUTTON_AQUI": "Aquí",
+    "BUTTON_RUTA": "Ruta",
+    "VOLVER": "Volver",
+    "DISTANCE": "Distancia: "
+  },
+  "ASISTENCIA": {
+    "BLOQUE_INICIO": "Bloque de inicio",
+    "BLOQUE_TERMINO": "Bloque de término",
+    "DIA": "Día",
+    "HORA_INICIO": "Hora de inicio",
+    "HORA_TERMINO": "Hora de término",
+    "SIGLA_ASIGNATURA": "Sigla de asignatura",
+    "NOMBRE_PROFESOR": "Nombre del profesor",
+    "SECCION": "Sección",
+    "SEDE": "Sede"
+  },
+  "USER": {
+    "CUENTA": "Cuenta",
+    "CORREO": "Correo",
+    "NOMBRE": "Nombre",
+    "APELLIDO": "Apellidos",
+    "PREGUNTA_SECRETA": "Pregunta secreta",
+    "RESPUESTA_SECRETA": "Respuesta secreta",
+    "NIVEL_EDUCACIONAL": "Nivel Educacional",
+    "FECHA_NACIMIENTO": "Fecha de nacimiento",
+    "CONTRASENA": "Contraseña",
+    "REPETIR_CONTRASENA": "Repetir contraseña",
+    "ACTUALIZAR_DATOS": "Actualizar mis datos"
+  },
+  "QR": {
+    "WELCOME": "Bienvenido(a)",
+    "START_SCAN": "Comenzar Escaneo de QR",
+    "STOP_SCAN": "Detener escaneo de QR",
+    "SCANNING": "Escaneando...",
+    "SCANNING_INSTRUCTION": "Apunta la cámara hacia un código QR."
+  },
+  "THEME": {
+  "ColorTheme": "Tema de Color",
+  "ColorTheme_Light": "Claro",
+  "ColorTheme_Dark": "Oscuro",
+  "ColorTheme_Green": "Verde",
+  "ColorTheme_Red": "Rojo",
+  "ColorTheme_Facebook": "Facebook",
+  "ColorTheme_Instagram": "Instagram",
+  "ColorTheme_Duoc": "Duoc",
+  "TITULO": "Temas"
+},
+"FORO":{
+  "TITLE": "Foro",
+  "LABEL": "Titulo",
+  "LABEL2": "Descripción",
+  "BUTTOM_LIMPIAR": "Limpiar",
+  "BUTTOM_GUARDAR": "Guardar",
+  "P_RECIENTES": "Publicaciones Recientes"
+}
+}
+
+    

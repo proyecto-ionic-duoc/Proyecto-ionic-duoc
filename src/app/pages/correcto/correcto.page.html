@@ -2,51 +2,44 @@
   <!-- Agrega el logo arriba del encabezado -->
   <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
   <ion-toolbar>
-    <ion-title class="ion-text-center title-container">Pregunta Secreta</ion-title>
+    <ion-title class="ion-text-center title-container">{{ 'RECUPERAR_CONTRASENA.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 <!-- Termina el Header -->
 
 <!-- Comienza el Content -->
 <ion-content [fullscreen]="true" class="ion-padding-horizontal">
-  <!-- <mat-slider min="1" max="100" step="1" value="10"></mat-slider> -->
   <ion-title class="ion-padding-top">
     <ion-label>
-      <h1 class="ion-text-center">Sistema de asistencia DUOC UC!</h1>
+      <h1 class="ion-text-center">{{ 'RECUPERAR_CONTRASENA.HEADER' | translate }}</h1>
 
       <ion-card>
         <ion-card-header>
           <ion-card-title>
-            Recuperar Contraseña
+            {{ 'RECUPERAR_CONTRASENA.TITLE' | translate }}
           </ion-card-title>
         </ion-card-header>
         <div class="ion-text-center">
-        <img src="assets/EstudiantesLogo.png">
-      </div>
+          <img src="assets/EstudiantesLogo.png">
+        </div>
         <ion-card-content>
           <br>
-                ¡CORRECTO!
+          {{ 'RECUPERAR_CONTRASENA.CORRECTO' | translate }}
           <br>
           <br>
-          TU CONTRASEÑA ES {{ contrasena }}
+          {{ 'RECUPERAR_CONTRASENA.TU_CONTRASENA' | translate }} {{ contrasena }}
           <br>
         </ion-card-content>
       </ion-card>
 
-
-        <ion-label>
-          <br>
-          <div class="ion-text-center">
-            <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
-              Regresar al login
-            </ion-button>
-          </div>
-        </ion-label>
+      <ion-label>
+        <br>
+        <div class="ion-text-center">
+          <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
+            {{ 'RECUPERAR_CONTRASENA.BUTTON_REGRESAR' | translate }}
+          </ion-button>
+        </div>
+      </ion-label>
     </ion-label>
   </ion-title>
-
-
-
-
-<!-- Termina el Content -->
-
+</ion-content>

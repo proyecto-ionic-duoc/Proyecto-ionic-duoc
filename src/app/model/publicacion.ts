@@ -1,12 +1,9 @@
 export class Publicacion {
 
 	id = '';
-	correo = '';
-	nombre = '';
-	apellido = '';
-	titulo = '';
-	contenido = '';
-
+	title = '';
+	body = '';
+	name = '';
 	constructor() {
 	
 	}

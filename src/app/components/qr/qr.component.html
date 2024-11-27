@@ -2,16 +2,16 @@
 
   <div class="ion-padding-bottom">
     <h1>
-      ¡Bienvenido(a) {{ usuario.nombre }} {{ usuario.apellido }}!
+      ¡{{'QR.WELCOME' | translate}} {{ usuario.nombre }} {{ usuario.apellido }}!
     </h1>
   </div>
 
   <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
-    Comenzar Escaneo de QR
+    {{'QR.START_SCAN' | translate}}
   </ion-button>
 
   <ion-button *ngIf="escaneando && plataforma === 'web'" (click)="detenerEscaneoQR()">
-    Detener escaneo de QR
+    {{'QR.STOP_SCAN' | translate}}
   </ion-button>
 
   <video #video [hidden]="!escaneando" width="100%"></video>

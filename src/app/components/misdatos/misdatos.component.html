@@ -1,35 +1,42 @@
 <div class="marco">
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.cuenta" label="Cuenta" labelPlacement="floating" disabled="true"></ion-input>
+    <ion-label position="stacked">{{ 'USER.CUENTA' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.cuenta" labelPlacement="floating" disabled="true"></ion-input>
   </ion-item>
   
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.correo" label="Correo" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.CORREO' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.correo" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.nombre" label="Nombre" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.NOMBRE' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.nombre" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.apellido" label="Apellidos" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.APELLIDO' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.apellido" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.preguntaSecreta" label="Pregunta secreta" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.PREGUNTA_SECRETA' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.preguntaSecreta" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.respuestaSecreta" label="Respuesta secreta" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.RESPUESTA_SECRETA' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.respuestaSecreta" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="usuario.nivelEducacional" label="Nivel Educacional" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.NIVEL_EDUCACIONAL' | translate }}</ion-label>
+    <ion-input type="text" [(ngModel)]="usuario.nivelEducacional" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Fecha de nacimiento</ion-label>
+    <ion-label position="floating">{{'USER.FECHA_NACIMIENTO' | translate}}</ion-label>
     <ion-input 
       type="date" 
       [(ngModel)]="fechaVisualizar" 
@@ -39,17 +46,19 @@
 
 
   <ion-item>
-    <ion-input type="password" [(ngModel)]="usuario.password" label="Contraseña" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.CONTRASENA' | translate }}</ion-label>
+    <ion-input type="password" [(ngModel)]="usuario.password" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="password" [(ngModel)]="repeticionPassword" label="Repetir contraseña" labelPlacement="floating"></ion-input>
+    <ion-label position="stacked">{{ 'USER.REPETIR_CONTRASENA' | translate }}</ion-label>
+    <ion-input type="password" [(ngModel)]="repeticionPassword" labelPlacement="floating"></ion-input>
   </ion-item>
 
   <br>
   <div class="centrar-boton">
     <ion-button (click)="actualizarPerfil()">
-      Actualizar mis datos
+      {{'USER.ACTUALIZAR_DATOS' | translate}}
     </ion-button>
   </div>
 

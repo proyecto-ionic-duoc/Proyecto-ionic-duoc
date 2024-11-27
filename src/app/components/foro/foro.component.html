@@ -1,55 +1,60 @@
-<ion-content [fullscreen]="true">
-  <a #topOfPage href="#topOfPage"></a>
+<ion-content>
+  <a id="topOfPage" href="#topOfPage"></a>
+  <!-- Formulario para crear/editar publicaciones -->
   <ion-card>
-
     <ion-card-header>
-      <ion-card-title>Ingresa tu publicación</ion-card-title>
-    </ion-card-header>
-
-    <ion-item class="ion-padding-horizontal">
-      <ion-input [(ngModel)]="publicacion.titulo" label="Título" labelPlacement="floating"></ion-input>
-    </ion-item>
-
-    <ion-item class="ion-padding-horizontal">
-      <ion-textarea [(ngModel)]="publicacion.contenido" label="Contenido" labelPlacement="floating"></ion-textarea>
-    </ion-item>
-
-    <div class="alinear-centro">
-      <ion-button (click)="limpiarPublicacion()">Limpiar</ion-button>
-      <ion-button (click)="guardarPublicacion()">Guardar</ion-button>
-    </div>
-
-  </ion-card>
-
-  <ion-card class="sin-bordes">
-    <ion-card-title class="con-padding-top">Publicaciones recientes</ion-card-title>
-  </ion-card>
-
-  <ion-card *ngFor="let pub of publicaciones">
-
-    <ion-card-header>
-      <h4>
-        #{{ pub.id }}: {{ pub.titulo }} <br>
-        Autor: {{ pub.nombre }} {{ pub.apellido }}
-      </h4>
+      <ion-card-title>{{ 'FORO.TITLE' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ selectedPostText }}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      {{ pub.contenido }}
+      <ion-item>
+        <ion-label position="floating" color="secondary">{{ 'FORO.LABEL' | translate }}</ion-label>
+        <ion-input [(ngModel)]="post.title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="secondary">{{ 'FORO.LABEL2' | translate }}</ion-label>
+        <ion-textarea [(ngModel)]="post.body"></ion-textarea>
+      </ion-item>
+
+      <div class="ion-text-center margin-top-6">
+        <ion-button color="medium" shape="round" (click)="cleanPost()">{{ 'FORO.BUTTOM_LIMPIAR' | translate }}</ion-button>
+        <ion-button color="primary" shape="round" (click)="savePost()">
+          {{ post.id ? 'Actualizar' : 'FORO.BUTTOM_GUARDAR' | translate  }}
+        </ion-button>
+      </div>
+      
     </ion-card-content>
-
-    <div class="alinear-derecha">
-
-      <ion-button (click)="editarPublicacion(pub)">
-        Editar
-      </ion-button>
-
-      <ion-button (click)="eliminarPublicacion(pub)">
-        Eliminar
-      </ion-button>
-
-    </div>
-
   </ion-card>
+
+  <!-- Lista de publicaciones recientes -->
+  <ion-card class="sin-bordes">
+    <ion-card-title class="con-padding-top">{{ 'FORO.P_RECIENTES' | translate }}</ion-card-title>
+  </ion-card>
+
+  <ion-list>
+    <ion-card *ngFor="let post of posts; trackBy: getPostId">
+      <ion-card-header>
+        <h6>(Publicación #{{ post.id }}) {{ post.name }}</h6>
+        <h4>{{ post.title }}</h4>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <p>{{ post.body }}</p>
+      </ion-card-content>
+  
+      <!-- Contenedor para alinear los botones horizontalmente a la derecha -->
+      <div style="display: flex; justify-content: flex-end; gap: 10px; margin-right: 16px;">
+        <ion-fab-button size="small" color="primary" (click)="editPost(post)">
+          <ion-icon name="pencil-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button size="small" color="danger" (click)="deletePost(post)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </ion-card>
+  </ion-list>
+  
 
 </ion-content>

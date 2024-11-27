@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
+import { TranslateModule } from '@ngx-translate/core'; // Importa TranslateModule para resolver TranslateStore
 import { QrComponent } from './qr.component';
+import { Storage } from '@ionic/storage-angular'; // Asegúrate de importar Storage
 
 describe('QrComponent', () => {
   let component: QrComponent;
@@ -9,8 +10,17 @@ describe('QrComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ QrComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [
+        QrComponent, // Asegúrate de importar QrComponent, ya que es standalone
+        IonicModule.forRoot(), // Necesario para los componentes de Ionic
+        TranslateModule.forRoot(), // Necesario para TranslateService y TranslateStore
+      ],
+      providers: [
+        { 
+          provide: Storage, 
+          useValue: jasmine.createSpyObj('Storage', ['set', 'get', 'remove', 'create']) 
+        } // Mock de Storage con 'create' incluido
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(QrComponent);

@@ -6,6 +6,9 @@ import { GeoService } from 'src/app/services/geo.service';
 import * as L from 'leaflet'; // Importamos Leaflet
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageComponent } from 'src/app/components/language/language.component';
+
 
 @Component({
   selector: 'app-map',
@@ -16,6 +19,7 @@ import { Router } from '@angular/router';
       CommonModule    // CGV-Permite usar directivas comunes de Angular
     , FormsModule     // CGV-Permite usar formularios
     , IonicModule     // CGV-Permite usar componentes de Ionic como IonContent, IonItem, etc.
+    , TranslateModule
   ]
 })
 export class MapaPage implements OnInit {
@@ -23,12 +27,18 @@ export class MapaPage implements OnInit {
   map: L.Map | null = null;
   addressName: string = '';
   distance: string = '';
+  selectedLanguage: string = 'lang';
+
 
   constructor(
     private geo: GeoService, 
     private http: HttpClient,
-    private router: Router) { 
-
+    private router: Router,
+    private translateService: TranslateService
+  ) {
+    const lang = localStorage.getItem('lang') || 'es'
+    this.translateService.setDefaultLang('lang');
+    this.translateService.use(lang);
   }
 
   ngOnInit() {

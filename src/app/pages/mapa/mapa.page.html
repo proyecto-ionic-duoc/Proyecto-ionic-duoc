@@ -1,29 +1,25 @@
 <div id="mapId" style="height: 100%;"></div>
 <ion-footer>
   <ion-toolbar class="ion-text-center" color="primary">
-    <ion-button shape="round" color="secondary" size="small"
-        (click)="goToDUOC()" >
-      DUOC
+    <ion-button shape="round" color="secondary" size="small" (click)="goToDUOC()">
+      {{ 'MAPA.BUTTON_DUOC' | translate }}
     </ion-button>
 
-    <ion-button shape="round" color="secondary" size="small"
-        (click)="goToMyPosition()">
-      Aquí
+    <ion-button shape="round" color="secondary" size="small" (click)="goToMyPosition()">
+      {{ 'MAPA.BUTTON_AQUI' | translate }}
     </ion-button>
 
-    <ion-button shape="round" color="secondary" size="small"
-        (click)="showRouteToDuoc()">
-      Ruta
+    <ion-button shape="round" color="secondary" size="small" (click)="showRouteToDuoc()">
+      {{ 'MAPA.BUTTON_RUTA' | translate }}
     </ion-button>
 
-    <ion-button shape="round" color="secondary" size="small"
-        (click)="volverAlInicio()">
-      Volver
+    <ion-button shape="round" color="secondary" size="small" (click)="volverAlInicio()">
+      {{ 'MAPA.VOLVER' | translate }}
     </ion-button>
 
     <div *ngIf="distance">
       <br>
-      {{ distance }}
+      {{ 'MAPA.DISTANCE' | translate }} {{ distance }}
     </div>
   </ion-toolbar>
 </ion-footer>

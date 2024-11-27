@@ -22,7 +22,6 @@ ion-header {
 }
 
 .ListaInicioSesion {
-  background-color: #111010;
   padding: 20px;
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -47,7 +46,6 @@ ion-button {
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
-  color: aliceblue;
   
 
 }
@@ -68,4 +66,37 @@ ion-button {
   filter: drop-shadow(
     0 0 20px rgba(0, 0, 0, .8)
   );
+}
+
+/* Estilos para el selector de tema */
+.ThemeSelector {
+  margin-top: 10px;
+  color: #ffffff;
+
+  ion-label {
+    color: #ffffff;
+  }
+
+  ion-select {
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    --background: #333333;
+  }
+}
+
+/* Estilos adicionales para temas */
+body.light {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+body.dark {
+  --ion-background-color: #000000;
+  --ion-text-color: #ffffff;
+}
+
+body.blue {
+  --ion-background-color: #0d47a1;
+  --ion-text-color: #ffffff;
 }

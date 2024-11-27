@@ -2,27 +2,29 @@
   <!-- Agrega el logo arriba del encabezado -->
   <ion-img src="assets/logo-duoc.svg.png" class="logo"></ion-img>
   <ion-toolbar>
-    <ion-title class="ion-text-center title-container">Pregunta Secreta</ion-title>
+    <ion-title class="ion-text-center title-container">{{ 'PREGUNTA_SECRETA.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-label position="stacked">Pregunta Secreta</ion-label>
+    <ion-label position="stacked">{{ 'PREGUNTA_SECRETA.LABEL_PREGUNTA' | translate }}</ion-label>
     <ion-input type="text" [ngModel]="preguntaSecreta" readonly></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="stacked">Respuesta</ion-label>
+    <ion-label position="stacked">{{ 'PREGUNTA_SECRETA.LABEL_RESPUESTA' | translate }}</ion-label>
     <ion-input type="text" [(ngModel)]="respuesta"></ion-input>
   </ion-item>
 
   <ion-button expand="full" fill="clear" class="custom-link" (click)="login()">
-    Regresar al login
+    {{ 'PREGUNTA_SECRETA.BUTTON_REGRESAR' | translate }}
   </ion-button>
 
   <!-- Mostrar el mensaje de error si errorMessage no está vacío -->
   <ion-label color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-label>
 
-  <ion-button expand="full" (click)="validarRespuesta()">Continuar</ion-button>
+  <ion-button expand="full" (click)="validarRespuesta()">
+    {{ 'PREGUNTA_SECRETA.BUTTON_CONTINUAR' | translate }}
+  </ion-button>
 </ion-content>

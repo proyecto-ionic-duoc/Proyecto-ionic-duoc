@@ -2,7 +2,7 @@
   <ion-grid fixed>
     
     <ion-row>
-      <ion-col size="6">Bloque de inicio</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.BLOQUE_INICIO' | translate }}</ion-col>
       <ion-col size="6">
         <span *ngIf="asistencia.bloqueInicio > 0">
           {{ asistencia.bloqueInicio }}
@@ -11,7 +11,7 @@
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Bloque de término</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.BLOQUE_TERMINO' | translate }}</ion-col>
       <ion-col size="6">
         <span *ngIf="asistencia.bloqueTermino > 0">
           {{ asistencia.bloqueTermino }}
@@ -20,37 +20,37 @@
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Día</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.DIA' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.dia }}</ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Hora de inicio</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.HORA_INICIO' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.horaInicio }}</ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Hora de término</ion-col>
-      <ion-col size="6">{{asistencia.horaFin}}</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.HORA_TERMINO' | translate }}</ion-col>
+      <ion-col size="6">{{ asistencia.horaFin }}</ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Sigla de asignatura</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.SIGLA_ASIGNATURA' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.idAsignatura }}</ion-col>
     </ion-row>
     
     <ion-row>
-      <ion-col size="6">Nombre del profesor</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.NOMBRE_PROFESOR' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.nombreProfesor }}</ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col size="6">Sección</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.SECCION' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.seccion }}</ion-col>
     </ion-row>
     
     <ion-row>
-      <ion-col size="6">Sede</ion-col>
+      <ion-col size="6">{{ 'ASISTENCIA.SEDE' | translate }}</ion-col>
       <ion-col size="6">{{ asistencia.sede }}</ion-col>
     </ion-row>
 

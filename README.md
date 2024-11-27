@@ -12,7 +12,6 @@
 #### Asegúrate de tener instaladas las siguientes herramientas en tu sistema antes de proceder:
 
 * Node.js: Puedes descargarlo desde Node.js.
-
 * Ionic CLI: Instala Ionic CLI ejecutando el siguiente comando:
 
 ``` 

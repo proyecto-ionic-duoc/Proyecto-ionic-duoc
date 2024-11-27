@@ -1,0 +1,115 @@
+{
+    "LANGUAGE": {
+    "LABEL": "Language",
+    "SPANISH": "Spanish",
+    "ENGLISH": "English",
+    "JAPANESE": "Japanese"
+    },
+    "LOGIN": {
+    "WELCOME": "Welcome to DuocUC Attendance System",
+    "USERNAME_PLACEHOLDER": "Username",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "SIGN_IN": "Sign In",
+    "DUOC_ROUTE": "DuocUC Route",
+    "RECOVER_PASSWORD": "Recover Password",
+    "FOOTER": "© 2024 DuocUC",
+    "TEMA":"Themes"
+    },
+    
+    "HEADER": {
+    "TITLE": "Welcome to DuoC Attendance",
+    "SEGMENT_QR": "QR",
+    "SEGMENT_MICLASE": "Class",
+    "SEGMENT_MISDATOS": "Data",
+    "SEGMENT_EXIT": "Exit",
+    "SEGMENT_FORO": "Forum",
+    "TITLE_INCORRECT": "INCORRECT!!",
+    "TITLE_CORREO": "Recover Password"
+    },
+    "BUTTONS":{
+    "LOGOUT":"Exit"
+    },
+    "CONTENT": {
+    "CORREO_ELECTRONICO": "E-mail",
+    "REGRESAR_LOGIN": "back to login",
+    "CONTINUAR": "Continue",
+    "ERROR_MESSAGE": "An error occurred. Please try again.",
+    "SISTEMA_ASISTENCIA":"DUOC UC Assistance System!",
+    "ERROR_DATOS":"WE ARE SORRY BUT THE DATA ENTERED ARE NOT CORRECT!"
+    
+    },
+    "PREGUNTA_SECRETA": {
+    "TITLE": "Secret Question.",
+    "LABEL_PREGUNTA": "Secret Question.",
+    "LABEL_RESPUESTA": "Answer.",
+    "BUTTON_REGRESAR": "Return to login.",
+    "BUTTON_CONTINUAR": "Continue",
+    "ERROR": "Error in the answer"
+    },
+    "RECUPERAR_CONTRASENA": {
+        "TITLE": "Recover Password",
+        "HEADER": "DUOC UC Assistance System!",
+        "CORRECTO": "CORRECT!",
+        "TU_CONTRASENA": "YOUR PASSWORD IS",
+        "BUTTON_REGRESAR": "Return to login"
+    },
+    "MAPA": {
+
+        "BUTTON_DUOC": "DUOC",
+        "BUTTON_AQUI": "here",
+        "BUTTON_RUTA": "Route",
+        "VOLVER": "back",
+        "DISTANCE": "Distance: "
+    },
+    "ASISTENCIA": {
+        "BLOQUE_INICIO": "Start Block",
+        "BLOQUE_TERMINO": "End Block",
+        "DIA": "Day",
+        "HORA_INICIO": "Start Time",
+        "HORA_TERMINO": "End Time",
+        "SIGLA_ASIGNATURA": "Subject Code",
+        "NOMBRE_PROFESOR": "Professor Name",
+        "SECCION": "Section",
+        "SEDE": "Campus"
+    },
+    "USER": {
+        "CUENTA": "Account",
+        "CORREO": "Email",
+        "NOMBRE": "First Name",
+        "APELLIDO": "Last Name",
+        "PREGUNTA_SECRETA": "Secret Question",
+        "RESPUESTA_SECRETA": "Secret Answer",
+        "NIVEL_EDUCACIONAL": "Educational Level",
+        "FECHA_NACIMIENTO": "Date of Birth",
+        "CONTRASENA": "Password",
+        "REPETIR_CONTRASENA": "Repeat Password",
+        "ACTUALIZAR_DATOS": "Update My Data"
+      },
+      "QR":{
+        "WELCOME": "Welcome",
+        "START_SCAN": "Start QR Scan",
+        "STOP_SCAN": "Stop QR Scan",
+        "SCANNING": "Scanning...",
+        "SCANNING_INSTRUCTION": "Point the camera at a QR code."
+      },
+      "THEME":{
+        "ColorTheme": "Color Theme",
+        "ColorTheme_Light": "Light",
+        "ColorTheme_Dark": "Dark",
+        "ColorTheme_Green": "Green",
+        "ColorTheme_Red": "Red",
+        "ColorTheme_Facebook": "Facebook",
+        "ColorTheme_Instagram": "Instagram",
+        "ColorTheme_Duoc": "Duoc",
+        "TITULO": "Themes"
+      },
+     "FORO": {
+  "TITLE": "Forum",
+  "LABEL": "Title",
+  "LABEL2": "Description",
+  "BUTTOM_LIMPIAR": "Clear",
+  "BUTTOM_GUARDAR": "Save",
+  "P_RECIENTES": "Recent Posts"
+}
+
+}

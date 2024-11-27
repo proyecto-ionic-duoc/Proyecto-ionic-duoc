@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary" class="padding-6">
+    <div slot="start">
+      <ion-button shape="round" (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div slot="end">
+      {{ 'THEME.TITULO' | translate }}
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-select 
+  label="{{ 'THEME.ColorTheme' | translate }}" 
+  (ionChange)="changeTheme($event)"
+  [(ngModel)]="colorTheme">
+<ion-select-option value="light">
+  {{ 'THEME.ColorTheme_Light' | translate }}
+</ion-select-option>
+<ion-select-option value="dark">
+  {{ 'THEME.ColorTheme_Dark' | translate }}
+</ion-select-option>
+<ion-select-option value="green">
+  {{ 'THEME.ColorTheme_Green' | translate }}
+</ion-select-option>
+<ion-select-option value="red">
+  {{ 'THEME.ColorTheme_Red' | translate }}
+</ion-select-option>
+<ion-select-option value="facebook">
+  {{ 'THEME.ColorTheme_Facebook' | translate }}
+</ion-select-option>
+<ion-select-option value="instagram">
+  {{ 'THEME.ColorTheme_Instagram' | translate }}
+</ion-select-option>
+<ion-select-option value="duoc">
+  {{ 'THEME.ColorTheme_Duoc' | translate }}
+</ion-select-option>
+</ion-select>
+
+</ion-content>

@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Historia del Instituto Profesional Duoc UC",
+      "body": "Conoce cómo el Duoc UC se fundó en 1968 como parte de un proyecto de la Pontificia Universidad Católica de Chile para brindar educación técnica y profesional de alta calidad.",
+      "name": "Equipo de Historia"
+    },
+    {
+      "id": "2",
+      "title": "Programas Académicos en Duoc UC",
+      "body": "Exploramos los diversos programas académicos que ofrece el Duoc UC, desde carreras técnicas hasta programas de continuidad de estudios.",
+      "name": "Equipo Académico"
+    },
+    {
+      "id": "3",
+      "title": "Innovación y Tecnología en Duoc UC",
+      "body": "Descubre cómo Duoc UC incorpora tecnología avanzada en sus programas de estudio para preparar a sus estudiantes para los desafíos del mercado laboral.",
+      "name": "Carlos Sánchez"
+    },
+    {
+      "id": "4",
+      "title": "Duoc UC: Campus y Sedes",
+      "body": "Un vistazo a los diferentes campus de Duoc UC en Chile, cada uno equipado con instalaciones de vanguardia para una experiencia educativa completa.",
+      "name": "Departamento de Infraestructura"
+    },
+    {
+      "id": "5",
+      "title": "Proyectos de Vinculación con el Medio",
+      "body": "Explora cómo Duoc UC trabaja en conjunto con comunidades y empresas para realizar proyectos que beneficien tanto a los estudiantes como a la sociedad.",
+      "name": "Equipo de Vinculación"
+    },
+    {
+      "id": "6",
+      "title": "Educación Continua en Duoc UC",
+      "body": "Conoce las oportunidades de educación continua y especialización que Duoc UC ofrece a sus egresados y a profesionales en el mercado.",
+      "name": "María López"
+    },
+    {
+      "id": "7",
+      "title": "Certificaciones Internacionales en Duoc UC",
+      "body": "Duoc UC ofrece certificaciones internacionales en varias carreras, brindando a sus estudiantes una ventaja competitiva global.",
+      "name": "Ana Martínez"
+    },
+    {
+      "id": "8",
+      "title": "Convenios con Universidades Extranjeras",
+      "body": "Descubre los convenios de Duoc UC con universidades en el extranjero, que permiten a los estudiantes realizar intercambios y obtener doble titulación.",
+      "name": "Relaciones Internacionales"
+    },
+    {
+      "id": "9",
+      "title": "Carreras de Alta Demanda en Duoc UC",
+      "body": "Un análisis de las carreras de alta demanda en Duoc UC, enfocadas en tecnología, salud y administración.",
+      "name": "Equipo de Admisión"
+    }
+  ]
+}

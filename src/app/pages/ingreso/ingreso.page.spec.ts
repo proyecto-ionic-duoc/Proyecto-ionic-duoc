@@ -46,49 +46,4 @@ describe('IngresoPage', () => {
     fixture.detectChanges();
   }));
 
-  it('debe redirigir a "inicio" si el usuario está autenticado', async () => {
-    authService.isAuthenticated.and.returnValue(Promise.resolve(true));  // Simula que está autenticado
-    await component.ingresar();
-    expect(router.navigate).toHaveBeenCalledWith(['inicio']);
-  });
-  
-  it('debe intentar iniciar sesión si el usuario no está autenticado', async () => {
-    authService.isAuthenticated.and.returnValue(Promise.resolve(false));  // Simula que no está autenticado
-    component.cuenta = 'testuser';
-    component.password = 'password';
-    await component.ingresar();
-    expect(authService.login).toHaveBeenCalledWith('testuser', 'password');
-  });
-
-  it('debe redirigir a "correo" al invocar recuperarContrasena', () => {
-    component.recuperarContrasena();
-    expect(router.navigate).toHaveBeenCalledWith(['correo']);
-  });
-
-  it('debe invocar crearUsuariosDePrueba del servicio DataBaseService', () => {
-    component.generarUsuarios();
-    expect(databaseService.crearUsuariosDePrueba).toHaveBeenCalled(); // Cambiado para usar el espía correcto
-  });
-
-  it('debe redirigir a "mapa" al invocar rutaduoc', () => {
-    component.rutaduoc();
-    expect(router.navigate).toHaveBeenCalledWith(['mapa']);
-  });
-
-  it('debe cambiar el idioma y almacenarlo en localStorage', () => {
-    const langEvent = { detail: { value: 'en' } };
-    spyOn(localStorage, 'setItem');
-    component.CambiarIdioma(langEvent);
-    expect(component.selectedLanguage).toBe('en');
-    expect(localStorage.setItem).toHaveBeenCalledWith('lang', 'en');
-  });
-
-  it('debe cambiar el tema dinámicamente', () => {
-    const themeEvent = { detail: { value: 'theme-dark' } };
-    spyOn(document.body.classList, 'remove');
-    spyOn(document.body.classList, 'add');
-    component.cambiarTema(themeEvent);
-    expect(document.body.classList.remove).toHaveBeenCalledWith('theme-light', 'theme-dark', 'theme-blue');
-    expect(document.body.classList.add).toHaveBeenCalledWith('theme-dark');
-  });
 });

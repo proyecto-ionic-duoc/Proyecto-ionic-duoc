@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { QrComponent } from 'src/app/components/qr/qr.component';
 import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
+import { UsuariosComponent } from 'src/app/components/usuarios/usuarios.component';
 import { ForoComponent } from 'src/app/components/foro/foro.component';
 import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.component';
 import { AuthService } from 'src/app/services/auth.service';
@@ -24,10 +25,12 @@ import { LanguageComponent } from 'src/app/components/language/language.componen
             MiclaseComponent, 
             ForoComponent, 
             MisdatosComponent,
+            UsuariosComponent,
             TranslateModule]
 })
 export class InicioPage implements OnInit {
 
+  esAdmin: Boolean = false;
   selectedLanguage: string = 'es';
   componente_actual = 'qr';
 
@@ -47,18 +50,27 @@ export class InicioPage implements OnInit {
   }
   
 
-  ngOnInit() {
-    this.authService.primerInicioSesion.subscribe(esPrimerInicioSesion => {
-      this.componente_actual = 'qr';
-      this.bd.datosQR.next('');
+  async ngOnInit() {
+    this.authService.primerInicioSesion.subscribe(async (esPrimerInicioSesion) => {
+      if (esPrimerInicioSesion) {
+        this.componente_actual = 'qr';
+        this.bd.datosQR.next('');
+  
+        // Usamos await correctamente aquí
+        const usuarioAutenticado = await this.authService.leerUsuarioAutenticado();
+        this.esAdmin = usuarioAutenticado?.admin === '1';
+      }
     });
   }
+  
 
+  
   cambiarComponente(nombreComponente: string) {
     this.componente_actual = nombreComponente;
     if (nombreComponente === 'foro') this.api.fetchPosts();
     if (nombreComponente === 'misdatos') this.authService.leerUsuarioAutenticado();
     if (nombreComponente === 'cerrarsesion')this.authService.logout();
+    if (nombreComponente === 'usuarios')this.authService.leerUsuarioAutenticado(); 
   }
 
 }

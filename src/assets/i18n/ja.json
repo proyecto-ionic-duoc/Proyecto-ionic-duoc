@@ -25,7 +25,8 @@
       "SEGMENT_FORO": "フォーラム",
       "SEGMENT_EXIT": "終了",
       "TITLE_INCORRECT": "不正解!!",
-      "TITLE_CORREO": "パスワードを回復"
+      "TITLE_CORREO": "パスワードを回復",
+              "SEGMENT_USUARIOS": "テーマ"
   },
   "BUTTONS": {
       "LOGOUT": "ログアウト"
@@ -82,7 +83,8 @@
       "FECHA_NACIMIENTO": "誕生日",
       "CONTRASENA": "パスワード",
       "REPETIR_CONTRASENA": "パスワードを再入力",
-      "ACTUALIZAR_DATOS": "データを更新"
+      "ACTUALIZAR_DATOS": "データを更新",
+          "DIRECCION":"スキャン中"
     },
     "QR": {
       "WELCOME": "ようこそ",

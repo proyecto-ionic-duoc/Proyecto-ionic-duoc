@@ -8,6 +8,8 @@ export class Usuario {
   respuestaSecreta = '';
   nivelEducacional = '';
   fechaNacimiento = '';
+  direccion = '';
+  admin = '0'; 
 
   constructor(
     cuenta: string = '',
@@ -18,7 +20,9 @@ export class Usuario {
     preguntaSecreta: string = '',
     respuestaSecreta: string = '',
     nivelEducacional: string = '',
-    fechaNacimiento: string = ''
+    fechaNacimiento: string = '',
+    direccion: string = '',
+    admin: string = '',
   ) {
     this.cuenta = cuenta;
     this.correo = correo;
@@ -29,20 +33,53 @@ export class Usuario {
     this.respuestaSecreta = respuestaSecreta;
     this.nivelEducacional = nivelEducacional;
     this.fechaNacimiento = fechaNacimiento;
+    this.direccion = direccion;
+    this.admin = admin;
+  }
+
+  static getUsuario(
+    cuenta: string,
+    correo: string,
+    password: string,
+    nombre: string,
+    apellido: string,
+    preguntaSecreta: string,
+    respuestaSecreta: string,
+    nivelEducacional: string,
+    fechaNacimiento: string,
+    direccion: string,
+    admin: string
+  ): Usuario {
+    return new Usuario(
+      cuenta,
+      correo,
+      password,
+      nombre,
+      apellido,
+      preguntaSecreta,
+      respuestaSecreta,
+      nivelEducacional,
+      fechaNacimiento,
+      direccion,
+      admin
+    );
   }
   
 
-  static getUsuario(cuenta: string, correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, nivelEducacional: string, fechaNacimiento: string) {
-    return new Usuario(cuenta, correo, password, nombre, apellido, preguntaSecreta, respuestaSecreta, nivelEducacional, fechaNacimiento);
-  }
-
+  // Métodos de validación
   validarCampoRequerido(nombreCampo: string, valor: string) {
     if (valor.trim() === '') return `El campo "${nombreCampo}" debe tener un valor.`;
     return '';
   }
 
+
+
   validarCorreo(correo: string): string {
     return this.validarCampoRequerido('correo', correo);
+  }
+
+  validarDireccion(direccion: string): string {
+    return this.validarCampoRequerido('dirección', direccion);
   }
 
   validarPassword(password: string): string {
@@ -65,12 +102,18 @@ export class Usuario {
     return this.validarCampoRequerido('respuesta secreta', respuestaSecreta);
   }
 
-  validarPropiedadesUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string): string {
+  validarPropiedadesUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string, direccion: string,admin: string): string {
     return this.validarCorreo(correo) 
       || this.validarPassword(password)
       || this.validarNombre(nombre)
       || this.validarApellido(apellido)
       || this.validarPreguntaSecreta(preguntaSecreta)
-      || this.validarRespuestaSecreta(respuestaSecreta);
+      || this.validarRespuestaSecreta(respuestaSecreta)
+      || this.validarDireccion(direccion)
   }
+
 }
+
+
+
+

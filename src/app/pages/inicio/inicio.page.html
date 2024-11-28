@@ -22,6 +22,10 @@
         <ion-label>{{ 'HEADER.SEGMENT_MICLASE' | translate }}</ion-label>
       </ion-segment-button>
 
+      <ion-segment-button *ngIf="esAdmin" value="usuarios">
+        <ion-label>{{ 'HEADER.SEGMENT_USUARIOS' | translate }}</ion-label>
+      </ion-segment-button>
+
       <ion-segment-button value="foro">
         <ion-label>{{ 'HEADER.SEGMENT_FORO' | translate }}</ion-label>
       </ion-segment-button> 
@@ -43,6 +47,9 @@
   <app-qr [hidden]="componente_actual !== 'qr'" (qrCapturado)="cambiarComponente('miclase')"></app-qr>
 
   <app-miclase [hidden]="componente_actual !== 'miclase'"></app-miclase>
+
+  
+  <app-usuarios [hidden]="componente_actual !== 'usuarios'"></app-usuarios>
 
   <app-foro [hidden]="componente_actual !== 'foro'"></app-foro>
 

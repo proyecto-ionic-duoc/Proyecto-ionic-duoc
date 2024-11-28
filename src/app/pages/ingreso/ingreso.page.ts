@@ -55,9 +55,9 @@ export class IngresoPage {
   recuperarContrasena() {
     this.router.navigate(['correo']);
   }
-  generarUsuarios() {
-    this.dataBaseService.crearUsuariosDePrueba();
 
+  generarUsuarios() {
+    this.dataBaseService.leerTodosLosUsuarios();
   }
 
   rutaduoc() {
@@ -73,6 +73,12 @@ export class IngresoPage {
   navigateTheme() {
     this.router.navigate(['/theme']);
   }
+
+  RegistrarUsuarios(){
+    this.router.navigate(['/registrarme']);
+  }
+
+
 
 }
 

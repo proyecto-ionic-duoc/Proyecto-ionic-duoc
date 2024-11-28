@@ -68,6 +68,7 @@ export class MisdatosComponent  implements OnInit {
     if (!this.validarCampo('nombre', this.usuario.nombre)) return;
     if (!this.validarCampo('apellidos', this.usuario.apellido)) return;
     if (!this.validarCampo('correo', this.usuario.correo)) return;
+    if (!this.validarCampo('direccion', this.usuario.direccion)) return;
     if (!this.validarCampo('pregunta secreta', this.usuario.preguntaSecreta)) return;
     if (!this.validarCampo('respuesta secreta', this.usuario.respuestaSecreta)) return;
     if (!this.validarCampo('contraseña', this.usuario.password)) return;
@@ -80,4 +81,20 @@ export class MisdatosComponent  implements OnInit {
     showToast('Sus datos fueron actualizados');
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }

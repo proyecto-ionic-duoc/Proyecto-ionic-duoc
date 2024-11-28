@@ -1,0 +1,108 @@
+ion-header {
+  ion-toolbar {
+    display: flex;
+    justify-content: center;
+    ion-title {
+      text-align: center;
+      flex: 1;
+      font-size: 1.5rem; /* Ajusta el tamaño del título */
+    }
+  }
+}
+
+.InicioSesion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('/assets/PalacioAlonsoOvalle.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.ListaInicioSesion {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */ /* Limitar el tamaño máximo del formulario */
+  width: 90%;
+  margin-top: 0px;
+}
+
+ion-item {
+  margin-bottom: 5px;/* Añadir espacio entre los campos */
+  
+}
+
+ion-input, ion-datetime {
+  font-size: 14px; /* Ajustar tamaño de texto */
+  padding: 10px;
+}
+
+ion-button {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px; /* Aumentar el tamaño del texto en el botón */
+  margin-top: 20px;
+  --background: #007bff; /* Color del botón */
+  --color: white;
+}
+
+.fecha {
+  font-size: 14px; /* Ajuste de tamaño de fecha */
+  padding: 10px;
+}
+
+.imageLogin {
+  background: rgba(9, 9, 9, 0.6);
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.Consulta {
+  font-size: 12px; /* Ajuste tamaño texto para consulta */
+  color: #007bff; /* Cambiar color */
+}
+
+.Indicar {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.IdeasContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.LanguageContainer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 16px;
+}
+
+.RegistrarseBtn {
+  background: #28a745;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.ThemeSelector {
+  margin-top: 10px;
+  color: #ffffff;
+
+  ion-label {
+    color: #ffffff;
+  }
+
+  ion-select {
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    --background: #333333;
+  }
+  
+}

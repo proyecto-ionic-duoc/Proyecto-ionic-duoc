@@ -1,0 +1,64 @@
+
+<ion-content>
+  <div class="InicioSesion">
+
+  <ion-list class="ListaInicioSesion">
+    <ion-toolbar>
+      <ion-title>Registro de Usuario</ion-title>
+    </ion-toolbar>
+    <ion-item>
+      <ion-label position="floating">Cuenta</ion-label>
+      <ion-input [(ngModel)]="cuenta" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="correo" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input [(ngModel)]="apellido" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Pregunta Secreta</ion-label>
+      <ion-input [(ngModel)]="preguntaSecreta" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Respuesta Secreta</ion-label>
+      <ion-input [(ngModel)]="respuestaSecreta" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Nivel Educacional</ion-label>
+      <ion-input [(ngModel)]="nivelEducacional" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha de Nacimiento</ion-label>
+      <ion-datetime
+        [(ngModel)]="fechaNacimiento"
+        display-format="YYYY-MM-DD"
+        placeholder="Selecciona tu fecha"
+        class="date-width">
+      </ion-datetime>
+    </ion-item>
+    
+    <ion-button expand="block" (click)="registrar()">Registrar</ion-button>
+    <ion-button expand="block" (click)="cancelar()">Cancelar</ion-button>
+  </ion-list>
+
+</div>
+</ion-content>

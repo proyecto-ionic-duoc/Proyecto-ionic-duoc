@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Usuario } from '../model/usuario';
 import { Router } from '@angular/router';
 import { DataBaseService } from './data-base.service';
 import { Storage } from '@ionic/storage-angular';
 import { showToast } from '../tools/message-routines';
+import { Usuario } from '../model/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class AuthService {
   async inicializarAutenticacion() {
     await this.storage.create();
   }
+
 
   async isAuthenticated(): Promise<boolean> {
     return await this.leerUsuarioAutenticado().then(usuario => {

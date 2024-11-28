@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Mostrar la lista de usuarios -->
+  <ion-list>
+    <ion-item *ngFor="let usuario of listaUsuarios">
+      <ion-label>
+        <h2>{{ usuario.nombre }} {{ usuario.apellido }}</h2>
+        <p>{{ usuario.correo }}</p>
+      </ion-label>
+      <ion-button color="danger" (click)="eliminarUsuario(usuario.correo)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

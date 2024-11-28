@@ -27,13 +27,15 @@
       <br><br>
       <ion-item class="LoginItem">
         <ion-input 
-          [(ngModel)]="cuenta" 
-          type="text" 
-          [placeholder]="'LOGIN.USERNAME_PLACEHOLDER' | translate">
-        </ion-input>
+        id="cuenta"
+        [(ngModel)]="cuenta" 
+        type="text" 
+        [placeholder]="'LOGIN.USERNAME_PLACEHOLDER' | translate">
+      </ion-input>
       </ion-item>
       <ion-item class="LoginItem">
         <ion-input 
+        id="#password"
           [(ngModel)]="password" 
           type="password" 
           [placeholder]="'LOGIN.PASSWORD_PLACEHOLDER' | translate">

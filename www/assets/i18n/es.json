@@ -23,7 +23,8 @@
         "SEGMENT_FORO": "Foro",
         "SEGMENT_EXIT": "Salir",
         "TITLE_INCORRECT": "Incorrecto",
-        "TITLE_CORREO": "Recuperar Contraseña"
+        "TITLE_CORREO": "Recuperar Contraseña",
+        "SEGMENT_USUARIOS": "Usuarios"
     },
     "BUTTONS":{
         "LOGOUT":"salir"
@@ -81,7 +82,8 @@
     "FECHA_NACIMIENTO": "Fecha de nacimiento",
     "CONTRASENA": "Contraseña",
     "REPETIR_CONTRASENA": "Repetir contraseña",
-    "ACTUALIZAR_DATOS": "Actualizar mis datos"
+    "ACTUALIZAR_DATOS": "Actualizar mis datos",
+    "DIRECCION":"Direccion"
   },
   "QR": {
     "WELCOME": "Bienvenido(a)",

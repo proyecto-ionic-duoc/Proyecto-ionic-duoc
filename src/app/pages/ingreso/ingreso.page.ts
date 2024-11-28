@@ -57,7 +57,7 @@ export class IngresoPage {
   }
 
   generarUsuarios() {
-    this.dataBaseService.leerTodosLosUsuarios();
+    this.dataBaseService.inicializarBaseDeDatos();
   }
 
   rutaduoc() {
